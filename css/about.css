@@ -1,0 +1,404 @@
+/* Global variables */
+:root{
+    --mainColor: rgb(255, 90, 88);
+    --secondaryColor: rgb(74, 175, 255);
+    --fontColor: rgb(46, 45, 46);
+}
+
+/* end Global variables */
+/* Global rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* mini small */
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End global rules */
+
+/* Components */
+.btn {
+    background-color: transparent;
+    width: 170px;
+    padding: 13px 10px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    margin-right: 20px;
+    font-weight: 700;
+    transition: .4s linear;
+}
+
+h1 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+p {
+    line-height: 1.5;
+    word-spacing: 1px;
+    font-size: 16px;
+}
+button:hover {
+    cursor: pointer;
+}
+.h1::after {
+    content: "";
+    width: 60px;
+    height: 7px;
+    position: absolute;
+    top: calc(-7px + -10px);
+    left: 0;
+    background-color: rgb(255, 90, 88);
+    border-radius: 7px;
+
+}
+
+/* End components */
+
+/* Start header section */
+
+.header {
+    min-height: 100px;
+}
+@media (max-width: 480px){
+    .header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.header .container .top-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header .container .top-header .img {
+    min-width: 150px
+}
+
+.header .container .top-header img {
+    flex-basis: 100px;
+    transition: .8s linear;
+}
+
+.column {
+    flex-direction: column;
+}
+@media (min-width: 781px) {
+    .column {
+        flex-direction: row;
+    }
+    
+}
+
+.header .container .top-header .links ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reformat {
+    padding: 20px 0px 20px;
+}
+
+
+.header .container .top-header .links ul li {
+    padding-left: 20px;
+    word-spacing: 2px;
+}
+
+.header .container .top-header .links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 19px;
+}
+
+.header .container .top-header .links ul li a:hover {
+    color: rgb(27, 90, 141);
+}
+
+
+
+@media (max-width: 782px) {
+    .top-header {
+        flex-wrap: wrap;
+    }
+    .img {
+        width: 50%;
+    }
+    .lin {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .hide {
+        display: none;
+    }
+
+    .ulA {
+        padding-left: 0;
+    }
+    .appear {
+        width: 56px;
+        height: 40px;
+        padding: 10px 0;
+        border: 1px solid rgb(223, 214, 214);
+        border-radius: 10%;
+        display: flex;
+        align-items: center;
+        align-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .appear span {
+        background-color: rgb(127, 127, 127);
+        width: 30px;
+        height: 2px;
+        border-radius: 10%;
+        display: block;
+    }
+
+    .header .container .intro {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .header .container .intro h1 {
+        font-size: 30px;
+    }
+
+    .header .container .intro .btns {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 360px){
+    .lin {
+        width: 10%;
+    }
+    .appear {
+        min-width: 56px;
+    }
+}
+
+
+
+
+/* End header section */
+
+/* Start welcome section */
+
+
+.welcome {
+    min-height: 100px;
+    margin-top: 75px;
+    padding-top: 90px;
+    position: relative;
+}
+
+.welcome .container {
+    position: relative;
+}
+
+.welcome .container  span {
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    width: 450px;
+    height: 400px;
+    /* height: 100%; */
+    border-radius: 50%;
+    background-color: rgb(247, 247, 248);
+    z-index: -1;
+}
+
+
+.welcome .container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: var(--fontColor);
+    position: relative;
+}
+@media (max-width:400px){
+    .welcome .container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+.welcome .container .col-1 {
+    word-spacing: 1px;
+    letter-spacing: .7px;
+}
+
+.welcome .container .col-1 h1 {
+    margin: 0;
+    font-size: 34px;
+    position: relative;
+}
+
+.welcome .container .col-1 h1::after {
+    top: calc(-7px + -10px);
+    left: 0;
+}
+
+.welcome .container .col-1 p {
+    width: 90%;
+}
+
+.welcome .container .col-1 button {
+    margin-top: 40px;
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+    font-weight: 500;
+}
+
+.welcome .container .col-1 button:hover {
+    color: var(--fontColor);
+    border-color: var(--mainColor);
+}
+
+.welcome .container .col-2 {
+    padding: 0 10px;
+}
+
+
+@media (max-width:1200px){
+    .welcome .container  img {
+        width: 290px;
+        height: 290px;
+    }
+    .welcome .container .col-1 button {
+        margin-top: 20px;
+    }
+    .welcome .container span {
+        width: 30%;
+    }
+    .welcome {
+        margin-top: 75px;
+        padding-top: 65px;
+    }
+    .welcome .container  span {
+        top: -30%;
+        left: -10%;
+        width: 450px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 990px) {
+    .welcome .container  img {
+        width: 210px;
+        height: 230px;
+    }
+    .welcome .container .col-1 h1 {
+        font-size: 26px;
+    }
+    .welcome {
+        margin-top: 75px;
+        padding-top: 30px;
+    }
+}
+
+/* This qury for wraping the grid */
+
+@media (max-width: 769px){
+    .welcome .container {
+        display: grid;
+        grid-template-columns: 1fr; /**/
+        row-gap: 30px;
+    }
+    .welcome .container .col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .welcome .container .col-2 img {
+        width: 100%;
+        height: 100%;
+    }
+    .welcome .container  span{
+        display: none;
+    }
+    
+}
+
+/* Make a grid of one column and one row */
+
+@media (max-width: 470px){
+    .welcome .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+/* End welcome section */
+
+/* Start footer section */
+.footer {
+    margin: 90px 0 0;
+    padding: 20px;
+    background-color: rgb(18, 18, 18);
+}
+
+.footer .contact div {
+    border-bottom: 2px solid white;
+}
+.footer p {
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer p a:hover {
+    color: var(--mainColor);
+    cursor: pointer;
+    
+}
+/* End footer section */
